@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Limestone",
+
+  "block.minecraft.comparator": "Limestone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Limestone Ore",
+  "block.minecraft.redstone_block": "Limestone Block",
+  "block.minecraft.redstone_lamp": "Limestone Lamp",
+  "block.minecraft.redstone_ore": "Limestone Ore",
+  "block.minecraft.redstone_torch": "Limestone Torch",
+  "block.minecraft.redstone_wall_torch": "Limestone Wall Torch",
+  "block.minecraft.redstone_wire": "Limestone Wire",
+  "block.minecraft.repeater": "Limestone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Limestone Ready",
+
+  "item.minecraft.redstone": "Limestone Dust",
+
+  "itemGroup.redstone": "Limestone Blocks",
+
+  "trim_material.minecraft.redstone": "Limestone Material"
+}

@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Whitestone",
+
+  "block.minecraft.comparator": "Whitestone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Whitestone Ore",
+  "block.minecraft.redstone_block": "Whitestone Block",
+  "block.minecraft.redstone_lamp": "Whitestone Lamp",
+  "block.minecraft.redstone_ore": "Whitestone Ore",
+  "block.minecraft.redstone_torch": "Whitestone Torch",
+  "block.minecraft.redstone_wall_torch": "Whitestone Wall Torch",
+  "block.minecraft.redstone_wire": "Whitestone Wire",
+  "block.minecraft.repeater": "Whitestone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Whitestone Ready",
+
+  "item.minecraft.redstone": "Whitestone Dust",
+
+  "itemGroup.redstone": "Whitestone Blocks",
+
+  "trim_material.minecraft.redstone": "Whitestone Material"
+}

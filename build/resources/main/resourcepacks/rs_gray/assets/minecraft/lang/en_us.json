@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Graystone",
+
+  "block.minecraft.comparator": "Graystone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Graystone Ore",
+  "block.minecraft.redstone_block": "Graystone Block",
+  "block.minecraft.redstone_lamp": "Graystone Lamp",
+  "block.minecraft.redstone_ore": "Graystone Ore",
+  "block.minecraft.redstone_torch": "Graystone Torch",
+  "block.minecraft.redstone_wall_torch": "Graystone Wall Torch",
+  "block.minecraft.redstone_wire": "Graystone Wire",
+  "block.minecraft.repeater": "Graystone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Graystone Ready",
+
+  "item.minecraft.redstone": "Graystone Dust",
+
+  "itemGroup.redstone": "Graystone Blocks",
+
+  "trim_material.minecraft.redstone": "Graystone Material"
+}

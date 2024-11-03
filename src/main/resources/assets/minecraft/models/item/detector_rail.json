@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:block/detector_rail",
+    "layer1": "minecraft:block/detector_rail_overlay"
+  }
+}

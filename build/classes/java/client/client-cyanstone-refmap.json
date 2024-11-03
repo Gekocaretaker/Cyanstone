@@ -1,0 +1,24 @@
+{
+  "mappings": {
+    "com/gekocaretaker/cyanstone/mixin/client/MinecraftClientAccessor": {
+      "itemColors": "field_1760:Lnet/minecraft/class_325;"
+    },
+    "com/gekocaretaker/cyanstone/mixin/client/MinecraftClientMixin": {
+      "<init>(Lnet/minecraft/client/RunArgs;)V": "Lnet/minecraft/class_310;<init>(Lnet/minecraft/class_542;)V",
+      "Lcom/mojang/blaze3d/systems/RenderSystem;setupDefaultState(IIII)V": "Lcom/mojang/blaze3d/systems/RenderSystem;setupDefaultState(IIII)V",
+      "onFinishedLoading(Lnet/minecraft/client/MinecraftClient$LoadingContext;)V": "Lnet/minecraft/class_310;method_53465(Lnet/minecraft/class_310$class_8764;)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/gekocaretaker/cyanstone/mixin/client/MinecraftClientAccessor": {
+        "itemColors": "field_1760:Lnet/minecraft/class_325;"
+      },
+      "com/gekocaretaker/cyanstone/mixin/client/MinecraftClientMixin": {
+        "<init>(Lnet/minecraft/client/RunArgs;)V": "Lnet/minecraft/class_310;<init>(Lnet/minecraft/class_542;)V",
+        "Lcom/mojang/blaze3d/systems/RenderSystem;setupDefaultState(IIII)V": "Lcom/mojang/blaze3d/systems/RenderSystem;setupDefaultState(IIII)V",
+        "onFinishedLoading(Lnet/minecraft/client/MinecraftClient$LoadingContext;)V": "Lnet/minecraft/class_310;method_53465(Lnet/minecraft/class_310$class_8764;)V"
+      }
+    }
+  }
+}

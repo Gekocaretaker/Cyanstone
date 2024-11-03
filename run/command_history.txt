@@ -1,0 +1,8 @@
+/cyanstone red
+/cyanstone cyan
+/time set day
+/gamerule doDaylightCycle false
+/kill @e[type=!player]
+/gamerule doMobSpawning false
+/gamerule doTraderSpawning false
+/weather clear

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Cyanstone.client.iml" filepath="$PROJECT_DIR$/.idea/modules/Cyanstone.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Cyanstone.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Cyanstone.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Cyanstone.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Cyanstone.test.iml" />
+    </modules>
+  </component>
+</project>

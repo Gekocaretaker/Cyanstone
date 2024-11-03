@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Orangestone",
+
+  "block.minecraft.comparator": "Orangestone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Orangestone Ore",
+  "block.minecraft.redstone_block": "Orangestone Block",
+  "block.minecraft.redstone_lamp": "Orangestone Lamp",
+  "block.minecraft.redstone_ore": "Orangestone Ore",
+  "block.minecraft.redstone_torch": "Orangestone Torch",
+  "block.minecraft.redstone_wall_torch": "Orangestone Wall Torch",
+  "block.minecraft.redstone_wire": "Orangestone Wire",
+  "block.minecraft.repeater": "Orangestone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Orangestone Ready",
+
+  "item.minecraft.redstone": "Orangestone Dust",
+
+  "itemGroup.redstone": "Orangestone Blocks",
+
+  "trim_material.minecraft.redstone": "Orangestone Material"
+}

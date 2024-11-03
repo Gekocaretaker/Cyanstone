@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Pinkstone",
+
+  "block.minecraft.comparator": "Pinkstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Pinkstone Ore",
+  "block.minecraft.redstone_block": "Pinkstone Block",
+  "block.minecraft.redstone_lamp": "Pinkstone Lamp",
+  "block.minecraft.redstone_ore": "Pinkstone Ore",
+  "block.minecraft.redstone_torch": "Pinkstone Torch",
+  "block.minecraft.redstone_wall_torch": "Pinkstone Wall Torch",
+  "block.minecraft.redstone_wire": "Pinkstone Wire",
+  "block.minecraft.repeater": "Pinkstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Pinkstone Ready",
+
+  "item.minecraft.redstone": "Pinkstone Dust",
+
+  "itemGroup.redstone": "Pinkstone Blocks",
+
+  "trim_material.minecraft.redstone": "Pinkstone Material"
+}

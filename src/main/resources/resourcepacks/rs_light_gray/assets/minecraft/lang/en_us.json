@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Cloudstone",
+
+  "block.minecraft.comparator": "Cloudstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Cloudstone Ore",
+  "block.minecraft.redstone_block": "Cloudstone Block",
+  "block.minecraft.redstone_lamp": "Cloudstone Lamp",
+  "block.minecraft.redstone_ore": "Cloudstone Ore",
+  "block.minecraft.redstone_torch": "Cloudstone Torch",
+  "block.minecraft.redstone_wall_torch": "Cloudstone Wall Torch",
+  "block.minecraft.redstone_wire": "Cloudstone Wire",
+  "block.minecraft.repeater": "Cloudstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Cloudstone Ready",
+
+  "item.minecraft.redstone": "Cloudstone Dust",
+
+  "itemGroup.redstone": "Cloudstone Blocks",
+
+  "trim_material.minecraft.redstone": "Cloudstone Material"
+}

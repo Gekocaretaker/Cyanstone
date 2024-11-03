@@ -1,0 +1,2 @@
+v1	named	intermediary
+FIELD	com/gekocaretaker/cyanstone/mixin/client/MinecraftClientMixin	Lnet/minecraft/resource/ReloadableResourceManagerImpl;	resourceManager	field_1745

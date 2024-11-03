@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Greenstone",
+
+  "block.minecraft.comparator": "Greenstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Greenstone Ore",
+  "block.minecraft.redstone_block": "Greenstone Block",
+  "block.minecraft.redstone_lamp": "Greenstone Lamp",
+  "block.minecraft.redstone_ore": "Greenstone Ore",
+  "block.minecraft.redstone_torch": "Greenstone Torch",
+  "block.minecraft.redstone_wall_torch": "Greenstone Wall Torch",
+  "block.minecraft.redstone_wire": "Greenstone Wire",
+  "block.minecraft.repeater": "Greenstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Greenstone Ready",
+
+  "item.minecraft.redstone": "Greenstone Dust",
+
+  "itemGroup.redstone": "Greenstone Blocks",
+
+  "trim_material.minecraft.redstone": "Greenstone Material"
+}

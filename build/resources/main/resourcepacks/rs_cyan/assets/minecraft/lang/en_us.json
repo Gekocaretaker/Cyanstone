@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Cyanstone",
+
+  "block.minecraft.comparator": "Cyanstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Cyanstone Ore",
+  "block.minecraft.redstone_block": "Cyanstone Block",
+  "block.minecraft.redstone_lamp": "Cyanstone Lamp",
+  "block.minecraft.redstone_ore": "Cyanstone Ore",
+  "block.minecraft.redstone_torch": "Cyanstone Torch",
+  "block.minecraft.redstone_wall_torch": "Cyanstone Wall Torch",
+  "block.minecraft.redstone_wire": "Cyanstone Wire",
+  "block.minecraft.repeater": "Cyanstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Cyanstone Ready",
+
+  "item.minecraft.redstone": "Cyanstone Dust",
+
+  "itemGroup.redstone": "Cyanstone Blocks",
+
+  "trim_material.minecraft.redstone": "Cyanstone Material"
+}

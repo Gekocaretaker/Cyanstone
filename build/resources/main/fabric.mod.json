@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "cyanstone",
+  "version": "1.0.0",
+  "name": "Cyanstone",
+  "description": "Change your redstone.",
+  "authors": [
+    "gekocaretaker"
+  ],
+  "contact": {
+    "homepage": "github.com/gekocaretaker/Cyanstone",
+    "issues": "github.com/gekocaretaker/Cyanstone/issues"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/cyanstone/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.gekocaretaker.cyanstone.client.CyanstoneClient"
+    ],
+    "main": [
+      "com.gekocaretaker.cyanstone.Cyanstone"
+    ]
+  },
+  "mixins": [
+    "cyanstone.mixins.json",
+    {
+      "config": "cyanstone.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "accessWidener": "cyanstone.accesswidener",
+  "depends": {
+    "fabricloader": ">=0.16.8",
+    "fabric": "*",
+    "minecraft": "1.21"
+  }
+}

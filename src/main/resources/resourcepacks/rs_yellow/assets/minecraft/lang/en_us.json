@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Yellowstone",
+
+  "block.minecraft.comparator": "Yellowstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Yellowstone Ore",
+  "block.minecraft.redstone_block": "Yellowstone Block",
+  "block.minecraft.redstone_lamp": "Yellowstone Lamp",
+  "block.minecraft.redstone_ore": "Yellowstone Ore",
+  "block.minecraft.redstone_torch": "Yellowstone Torch",
+  "block.minecraft.redstone_wall_torch": "Yellowstone Wall Torch",
+  "block.minecraft.redstone_wire": "Yellowstone Wire",
+  "block.minecraft.repeater": "Yellowstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Yellowstone Ready",
+
+  "item.minecraft.redstone": "Yellowstone Dust",
+
+  "itemGroup.redstone": "Yellowstone Blocks",
+
+  "trim_material.minecraft.redstone": "Yellowstone Material"
+}

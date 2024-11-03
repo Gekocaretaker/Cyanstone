@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Purplestone",
+
+  "block.minecraft.comparator": "Purplestone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Purplestone Ore",
+  "block.minecraft.redstone_block": "Purplestone Block",
+  "block.minecraft.redstone_lamp": "Purplestone Lamp",
+  "block.minecraft.redstone_ore": "Purplestone Ore",
+  "block.minecraft.redstone_torch": "Purplestone Torch",
+  "block.minecraft.redstone_wall_torch": "Purplestone Wall Torch",
+  "block.minecraft.redstone_wire": "Purplestone Wire",
+  "block.minecraft.repeater": "Purplestone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Purplestone Ready",
+
+  "item.minecraft.redstone": "Purplestone Dust",
+
+  "itemGroup.redstone": "Purplestone Blocks",
+
+  "trim_material.minecraft.redstone": "Purplestone Material"
+}

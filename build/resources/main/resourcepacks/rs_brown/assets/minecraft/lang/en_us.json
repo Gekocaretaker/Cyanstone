@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Brownstone",
+
+  "block.minecraft.comparator": "Brownstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Brownstone Ore",
+  "block.minecraft.redstone_block": "Brownstone Block",
+  "block.minecraft.redstone_lamp": "Brownstone Lamp",
+  "block.minecraft.redstone_ore": "Brownstone Ore",
+  "block.minecraft.redstone_torch": "Brownstone Torch",
+  "block.minecraft.redstone_wall_torch": "Brownstone Wall Torch",
+  "block.minecraft.redstone_wire": "Brownstone Wire",
+  "block.minecraft.repeater": "Brownstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Brownstone Ready",
+
+  "item.minecraft.redstone": "Brownstone Dust",
+
+  "itemGroup.redstone": "Brownstone Blocks",
+
+  "trim_material.minecraft.redstone": "Brownstone Material"
+}

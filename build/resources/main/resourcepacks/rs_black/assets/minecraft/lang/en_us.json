@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Blackstone",
+
+  "block.minecraft.comparator": "Blackstone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Blackstone Ore",
+  "block.minecraft.redstone_block": "Blackstone Block",
+  "block.minecraft.redstone_lamp": "Blackstone Lamp",
+  "block.minecraft.redstone_ore": "Blackstone Ore",
+  "block.minecraft.redstone_torch": "Blackstone Torch",
+  "block.minecraft.redstone_wall_torch": "Blackstone Wall Torch",
+  "block.minecraft.redstone_wire": "Blackstone Wire",
+  "block.minecraft.repeater": "Blackstone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Blackstone Ready",
+
+  "item.minecraft.redstone": "Blackstone Dust",
+
+  "itemGroup.redstone": "Blackstone Blocks",
+
+  "trim_material.minecraft.redstone": "Blackstone Material"
+}

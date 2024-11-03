@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Magentastone",
+
+  "block.minecraft.comparator": "Magentastone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Magentastone Ore",
+  "block.minecraft.redstone_block": "Magentastone Block",
+  "block.minecraft.redstone_lamp": "Magentastone Lamp",
+  "block.minecraft.redstone_ore": "Magentastone Ore",
+  "block.minecraft.redstone_torch": "Magentastone Torch",
+  "block.minecraft.redstone_wall_torch": "Magentastone Wall Torch",
+  "block.minecraft.redstone_wire": "Magentastone Wire",
+  "block.minecraft.repeater": "Magentastone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Magentastone Ready",
+
+  "item.minecraft.redstone": "Magentastone Dust",
+
+  "itemGroup.redstone": "Magentastone Blocks",
+
+  "trim_material.minecraft.redstone": "Magentastone Material"
+}

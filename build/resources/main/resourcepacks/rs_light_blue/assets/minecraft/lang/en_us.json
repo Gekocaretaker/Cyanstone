@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Aquastone",
+
+  "block.minecraft.comparator": "Aquastone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Aquastone Ore",
+  "block.minecraft.redstone_block": "Aquastone Block",
+  "block.minecraft.redstone_lamp": "Aquastone Lamp",
+  "block.minecraft.redstone_ore": "Aquastone Ore",
+  "block.minecraft.redstone_torch": "Aquastone Torch",
+  "block.minecraft.redstone_wall_torch": "Aquastone Wall Torch",
+  "block.minecraft.redstone_wire": "Aquastone Wire",
+  "block.minecraft.repeater": "Aquastone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Aquastone Ready",
+
+  "item.minecraft.redstone": "Aquastone Dust",
+
+  "itemGroup.redstone": "Aquastone Blocks",
+
+  "trim_material.minecraft.redstone": "Aquastone Material"
+}

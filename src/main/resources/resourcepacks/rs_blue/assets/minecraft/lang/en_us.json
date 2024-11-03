@@ -1,0 +1,21 @@
+{
+  "advMode.mode.redstoneTriggered": "Needs Bluestone",
+
+  "block.minecraft.comparator": "Bluestone Comparator",
+  "block.minecraft.deepslate_redstone_ore": "Deepslate Bluestone Ore",
+  "block.minecraft.redstone_block": "Bluestone Block",
+  "block.minecraft.redstone_lamp": "Bluestone Lamp",
+  "block.minecraft.redstone_ore": "Bluestone Ore",
+  "block.minecraft.redstone_torch": "Bluestone Torch",
+  "block.minecraft.redstone_wall_torch": "Bluestone Wall Torch",
+  "block.minecraft.redstone_wire": "Bluestone Wire",
+  "block.minecraft.repeater": "Bluestone Repeater",
+
+  "flat_world_preset.minecraft.redstone_ready": "Bluestone Ready",
+
+  "item.minecraft.redstone": "Bluestone Dust",
+
+  "itemGroup.redstone": "Bluestone Blocks",
+
+  "trim_material.minecraft.redstone": "Bluestone Material"
+}
