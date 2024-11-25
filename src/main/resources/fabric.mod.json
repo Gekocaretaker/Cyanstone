@@ -15,8 +15,14 @@
   "icon": "assets/cyanstone/icon.png",
   "environment": "client",
   "entrypoints": {
+    "fabric-datagen": [
+      "com.gekocaretaker.cyanstone.datagen.CyanstoneDataGenerator"
+    ],
     "client": [
       "com.gekocaretaker.cyanstone.client.CyanstoneClient"
+    ],
+    "datagen": [
+      "com.gekocaretaker.cyanstone.datagen.CyanstoneDataGenerator"
     ],
     "main": [
       "com.gekocaretaker.cyanstone.Cyanstone"

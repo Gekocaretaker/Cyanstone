@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "minecraft:block/activator_rail",
-    "layer1": "minecraft:block/activator_rail_overlay"
-  }
-}

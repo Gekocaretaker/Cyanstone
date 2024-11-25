@@ -1,6 +1,7 @@
 package com.gekocaretaker.cyanstone.client;
 
 import com.gekocaretaker.cyanstone.Cyanstone;
+import com.gekocaretaker.cyanstone.client.support.Chipped;
 import com.gekocaretaker.cyanstone.client.util.Colorizer;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
 import net.fabricmc.api.ClientModInitializer;
@@ -8,6 +9,7 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RedstoneWireBlock;
 import net.minecraft.client.render.RenderLayer;
@@ -63,6 +65,11 @@ public class CyanstoneClient implements ClientModInitializer {
                     Items.EXPOSED_COPPER_BULB, Items.WAXED_EXPOSED_COPPER_BULB, Items.OXIDIZED_COPPER_BULB, Items.WAXED_OXIDIZED_COPPER_BULB,
                     Items.WEATHERED_COPPER_BULB, Items.WAXED_WEATHERED_COPPER_BULB, Items.ACTIVATOR_RAIL, Items.DETECTOR_RAIL, Items.POWERED_RAIL,
                     Items.OBSERVER, Items.CRAFTER);
+
+            // Mod Support
+            if (FabricLoader.getInstance().isModLoaded("chipped")) {
+                Chipped.register();
+            }
         });
 
         ClientFinishedLoadingCallback.EVENT.register(() -> {
