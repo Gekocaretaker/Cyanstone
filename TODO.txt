@@ -7,60 +7,9 @@ Athena
 
 Chipped
     lang
-        redstone block, lamp, & torch item tags
-        redstone block, lamp, & torch
+        redstone lamp, & torch item tags
+        redstone lamp, & torch			<-- Both need to be updated in a later version. Maybe, since they don't even have a texture change.
 
-    66 redstone blocks
-        regular
-            _bricks
-            _mini_tiles
-            _pillar
-            _pillar_top
-            _scales
-            angry_
-            blank_%_carving
-            carved_
-            checkered_%_tiles
-            cobbled_
-            cracked_%_bricks
-            cracked_disordered_%_bricks
-            cracked_flat_%_tiles
-            creeper_%_carving
-            crying_
-            cut_blank_
-            glad_
-            duh_
-            engraved_
-            eroded_
-            etched_%_bricks
-            flat_%_tiles
-            inlayed_
-            inscribed_
-            layed_%_bricks
-            loded_
-            pillar_%_bricks
-            prismal_%_remnants
-            rough_
-            rounded_%_bricks
-            runic_carved_
-            sad_
-            sanded_
-            small_%_bricks
-            smooth_inlayed_
-            smooth_ringed_
-            smoothed_double_inlayed_%
-            spider_%_carving
-            spiraled_
-            stacked_%_bricks
-            tiled_
-            tiny_%_bricks
-            tiny_layered_%_bricks
-            tiny_layered_%_slabs
-            trodden_
-            unamused_
-            vertical_cut_
-            vertical_disordered_%_bricks
-            weathered_
     5 redstone torches
         blue_
         crimson_
