@@ -28,11 +28,7 @@ loom {
 }
 
 repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
+	// Chipped is not on 1.21.4 yet
 	maven {
 		url "https://maven.teamresourceful.com/repository/maven-public/"
 	}
@@ -46,7 +42,8 @@ dependencies {
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-	modCompileOnly group: "earth.terrarium.chipped", name: "chipped-fabric-${project.minecraft_version}", version: project.chipped_version
+	// Chipped is not on 1.21.4 yet
+	//modCompileOnly group: "earth.terrarium.chipped", name: "chipped-fabric-${project.minecraft_version}", version: project.chipped_version
 }
 
 processResources {

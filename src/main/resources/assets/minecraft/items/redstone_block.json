@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "minecraft:block/redstone_block",
+    "tints": [
+      {
+        "type": "cyanstone:redstone",
+        "power": 15
+      }
+    ]
+  }
+}

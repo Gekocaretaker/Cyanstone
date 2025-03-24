@@ -29,7 +29,7 @@ public class RedstoneTorchBlockMixin {
             double d = (double) pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
             double e = (double) pos.getY() + 0.7 + (random.nextDouble() - 0.5) * 0.2;
             double f = (double) pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
-            world.addParticle(new DustParticleEffect(Cyanstone.VEC_COLOR, 1.0F), d, e, f, 0.0, 0.0, 0.0);
+            world.addParticle(new DustParticleEffect(RedstoneColors.getColor(15), 1.0F), d, e, f, 0.0, 0.0, 0.0);
         }
     }
 }

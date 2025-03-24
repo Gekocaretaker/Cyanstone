@@ -1,14 +1,12 @@
 package com.gekocaretaker.cyanstone.client.util;
 
-import com.gekocaretaker.cyanstone.mixin.client.MinecraftClientAccessor;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.client.color.item.ItemColorProvider;
-import net.minecraft.item.ItemConvertible;
+//import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 
@@ -19,18 +17,18 @@ public class Colorizer {
      * @param powerLevel The power level that the item(s) would have. Eg. Redstone Block has 15.
      * @param items The items that this color will be applied to.
      */
-    public static void item(int powerLevel, ItemConvertible... items) {
+    /*public static void item(int powerLevel, ItemConvertible... items) {
         item((stack, tintIndex) -> {
             return RedstoneColors.getColor(powerLevel);
         }, items);
-    }
+    }*/
 
     /**
      * Similar to item(powerLevel, items), however this colorizes all layers except layer0.
      * @param overlayPowerLevel The power level that the item(s) would have. Eg. Redstone Torch has 15 while Comparator has 0.
      * @param items The items that this color will be applied to.
      */
-    public static void itemWithOverlay(int overlayPowerLevel, ItemConvertible... items) {
+    /*public static void itemWithOverlay(int overlayPowerLevel, ItemConvertible... items) {
         item((stack, tintIndex) -> {
             if (tintIndex != 0) {
                 return RedstoneColors.getColor(overlayPowerLevel);
@@ -38,16 +36,16 @@ public class Colorizer {
                 return -1;
             }
         }, items);
-    }
+    }*/
 
     /**
      * A shorthand for the colorizing items with your own provider.
      * @param provider Your provider. It must return an int color to colorize the item. Use -1 for no colorizing.
      * @param items The items to colorize.
      */
-    public static void item(ItemColorProvider provider, ItemConvertible... items) {
+    /*public static void item(ItemColorProvider provider, ItemConvertible... items) {
         ((MinecraftClientAccessor) MinecraftClient.getInstance()).getItemColors().register(provider, items);
-    }
+    }*/
 
     /**
      * Colorize all the blocks according to the power level of the block. The block must have the POWER property.

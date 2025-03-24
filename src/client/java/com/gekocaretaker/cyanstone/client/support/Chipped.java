@@ -3,14 +3,14 @@ package com.gekocaretaker.cyanstone.client.support;
 import com.gekocaretaker.cyanstone.Cyanstone;
 import com.gekocaretaker.cyanstone.client.util.Colorizer;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
-import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
-import earth.terrarium.chipped.common.registry.ModBlocks;
+//import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
+//import earth.terrarium.chipped.common.registry.ModBlocks;
 import net.minecraft.block.Block;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Chipped {
-    private static final List<String> DISALLOWED_BLOCKS = new ArrayList<>() {{
+    /*private static final List<String> DISALLOWED_BLOCKS = new ArrayList<>() {{
         add("bordered_redstone_block");
         add("brick_bordered_redstone_block");
         add("curly_redstone_block_pillar");
@@ -37,7 +37,7 @@ public class Chipped {
                 Cyanstone.LOGGER.warn("Block '" + block.getId().toString() + "' is not allowed to be tinted.");
             }
         }
-    }};
+    }};*/
 
     // Use this if any blocks will have multiple layers. Since Chipped only has full redstone blocks, there is no need to use it.
     /*public static List<Block> cutoutBlocks() {
@@ -49,7 +49,7 @@ public class Chipped {
     }*/
 
     public static void register() {
-        Colorizer.block(15, REDSTONE_BLOCK.toArray(new Block[0]));
+        /*Colorizer.block(15, REDSTONE_BLOCK.toArray(new Block[0]));
         Colorizer.item(15, REDSTONE_BLOCK.toArray(new Block[0]));
 
         Colorizer.block((state, world, pos, tintIndex) -> {
@@ -60,6 +60,6 @@ public class Chipped {
             } else {
                 return -1;
             }
-        }, ModBlocks.TINKERING_TABLE.get());
+        }, ModBlocks.TINKERING_TABLE.get());*/
     }
 }

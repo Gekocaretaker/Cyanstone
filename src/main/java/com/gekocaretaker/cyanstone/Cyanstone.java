@@ -18,7 +18,7 @@ import java.util.*;
 public class Cyanstone implements ModInitializer {
     public static final String MOD_ID = "cyanstone";
     public static final Logger LOGGER = LogManager.getLogger();
-    public static Vector3f VEC_COLOR = Vec3d.unpackRgb(0).toVector3f();
+    //public static Vector3f VEC_COLOR = Vec3d.unpackRgb(0).toVector3f();
 
     private static final Map<String, String> colors = new HashMap<>(){{
         put("black", "Black");
