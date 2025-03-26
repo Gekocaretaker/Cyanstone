@@ -1,19 +1,22 @@
 package com.gekocaretaker.cyanstone.client.resource;
 
+import com.gekocaretaker.cyanstone.Cyanstone;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.minecraft.block.RedstoneWireBlock;
 import net.minecraft.client.util.RawTextureDataLoader;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.resource.SinglePreparationResourceReloader;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.profiler.Profiler;
 
 import java.io.IOException;
 
 @Environment(EnvType.CLIENT)
 public class RedstoneColormapResourceSupplier extends SinglePreparationResourceReloader<int[]> {
-    private static final Identifier REDSTONE_COLORMAP_LOC = Identifier.ofVanilla("textures/colormap/redstone.png");
+    private static final Identifier REDSTONE_COLORMAP_LOC = new Identifier("textures/colormap/redstone.png");
 
     public RedstoneColormapResourceSupplier() {
     }
@@ -29,5 +32,9 @@ public class RedstoneColormapResourceSupplier extends SinglePreparationResourceR
     @Override
     protected void apply(int[] prepared, ResourceManager manager, Profiler profiler) {
         RedstoneColors.setColorMap(prepared);
+        for (int i = 0; i <= 15; i++) {
+            RedstoneWireBlock.COLORS[i] = Vec3d.unpackRgb(RedstoneColors.getColor(i));
+        }
+        Cyanstone.VEC_COLOR = Vec3d.unpackRgb(RedstoneColors.getColor(15)).toVector3f();
     }
 }

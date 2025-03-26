@@ -7,7 +7,6 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 import net.minecraft.util.math.Vec3d;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -41,7 +40,6 @@ public class Cyanstone implements ModInitializer {
     @Override
     public void onInitialize() {
         Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer(MOD_ID);
-        //modContainer.ifPresent(container -> ResourceManagerHelper.registerBuiltinResourcePack(id("rs_cyan"), container, Text.of("Cyanstone"), ResourcePackActivationType.NORMAL));
         colors.forEach((folder, name) -> {
             modContainer.ifPresent(container -> ResourceManagerHelper.registerBuiltinResourcePack(id("rs_" + folder), container, Text.of(name + "stone"), ResourcePackActivationType.NORMAL));
         });

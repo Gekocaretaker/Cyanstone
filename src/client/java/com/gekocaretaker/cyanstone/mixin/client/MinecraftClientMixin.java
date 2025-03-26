@@ -22,7 +22,7 @@ public class MinecraftClientMixin {
         this.resourceManager.registerReloader(new RedstoneColormapResourceSupplier());
     }
 
-    @Inject(method = "onFinishedLoading(Lnet/minecraft/client/MinecraftClient$LoadingContext;)V", at = @At("TAIL"))
+    @Inject(method = "onFinishedLoading(Lnet/minecraft/client/MinecraftClient$LoadingContext;)V", at = @At("TAIL"), cancellable = true)
     private void injectToOnFinishedLoading(MinecraftClient.LoadingContext loadingContext, CallbackInfo ci) {
         ActionResult result = ClientFinishedLoadingCallback.EVENT.invoker().exist();
 
