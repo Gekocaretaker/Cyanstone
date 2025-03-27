@@ -1,35 +1,22 @@
 package com.gekocaretaker.cyanstone.mixin;
 
-import com.gekocaretaker.cyanstone.Cyanstone;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
-import net.minecraft.block.BlockState;
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.block.WallRedstoneTorchBlock;
 import net.minecraft.particle.DustParticleEffect;
-import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.particle.ParticleEffect;
 import net.minecraft.world.World;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(WallRedstoneTorchBlock.class)
 public class WallRedstoneTorchBlockMixin {
-
-    @Shadow @Final public static BooleanProperty LIT;
-
-    /**
-     * @author gekocaretaker
-     * @reason Cannot figure out how to just replace world.addParticle() while using 'state' from randomDisplayTick.
-     */
-    @Overwrite
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
-        if ((Boolean) state.get(LIT)) {
-            double d = (double) pos.getX() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
-            double e = (double) pos.getY() + 0.7 + (random.nextDouble() - 0.5) * 0.2;
-            double f = (double) pos.getZ() + 0.5 + (random.nextDouble() - 0.5) * 0.2;
-            world.addParticle(new DustParticleEffect(RedstoneColors.getColor(15), 1.0F), d, e, f, 0.0, 0.0, 0.0);
-        }
+    @WrapOperation(
+            method = "randomDisplayTick(Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/random/Random;)V",
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;addParticleClient(Lnet/minecraft/particle/ParticleEffect;DDDDDD)V")
+    )
+    private void cyanstone$randomDisplayTick(World instance, ParticleEffect parameters, double x, double y, double z, double velocityX, double velocityY, double velocityZ, Operation<Void> original) {
+        instance.addParticleClient(new DustParticleEffect(RedstoneColors.getColor(15), 1.0F), x, y, z, velocityX, velocityY, velocityZ);
     }
 }

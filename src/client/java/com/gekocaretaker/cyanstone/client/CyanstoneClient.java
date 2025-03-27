@@ -54,15 +54,6 @@ public class CyanstoneClient implements ClientModInitializer {
                 }
             }, Blocks.CRAFTER);
 
-            // Items
-            //Colorizer.item(15, Items.REDSTONE, Items.REDSTONE_BLOCK);
-            //Colorizer.itemWithOverlay(13, Items.REDSTONE_ORE, Items.DEEPSLATE_REDSTONE_ORE);
-            //Colorizer.itemWithOverlay(15, Items.REDSTONE_TORCH);
-            //Colorizer.itemWithOverlay(1, Items.COMPARATOR, Items.REPEATER, Items.COPPER_BULB, Items.WAXED_COPPER_BULB,
-            //        Items.EXPOSED_COPPER_BULB, Items.WAXED_EXPOSED_COPPER_BULB, Items.OXIDIZED_COPPER_BULB, Items.WAXED_OXIDIZED_COPPER_BULB,
-            //        Items.WEATHERED_COPPER_BULB, Items.WAXED_WEATHERED_COPPER_BULB, Items.ACTIVATOR_RAIL, Items.DETECTOR_RAIL, Items.POWERED_RAIL,
-            //        Items.OBSERVER, Items.CRAFTER);
-
             // Mod Support
             if (FabricLoader.getInstance().isModLoaded("chipped")) {
                 Chipped.register();
@@ -72,9 +63,7 @@ public class CyanstoneClient implements ClientModInitializer {
         ClientFinishedLoadingCallback.EVENT.register(() -> {
             for (int i = 0; i <= 15; i++) {
                 RedstoneWireBlock.COLORS[i] = RedstoneColors.getColor(i);
-                //RedstoneWireBlock.COLORS[i] = Vec3d.unpackRgb(RedstoneColors.getColor(i));
             }
-            //Cyanstone.VEC_COLOR = Vec3d.unpackRgb(RedstoneColors.getColor(15)).toVector3f();
 
             return ActionResult.PASS;
         });

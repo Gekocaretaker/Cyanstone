@@ -13,41 +13,6 @@ import net.minecraft.state.property.Property;
 @Environment(EnvType.CLIENT)
 public class Colorizer {
     /**
-     * Colorize the items entirely. Used for Redstone Dust & Block.
-     * @param powerLevel The power level that the item(s) would have. Eg. Redstone Block has 15.
-     * @param items The items that this color will be applied to.
-     */
-    /*public static void item(int powerLevel, ItemConvertible... items) {
-        item((stack, tintIndex) -> {
-            return RedstoneColors.getColor(powerLevel);
-        }, items);
-    }*/
-
-    /**
-     * Similar to item(powerLevel, items), however this colorizes all layers except layer0.
-     * @param overlayPowerLevel The power level that the item(s) would have. Eg. Redstone Torch has 15 while Comparator has 0.
-     * @param items The items that this color will be applied to.
-     */
-    /*public static void itemWithOverlay(int overlayPowerLevel, ItemConvertible... items) {
-        item((stack, tintIndex) -> {
-            if (tintIndex != 0) {
-                return RedstoneColors.getColor(overlayPowerLevel);
-            } else {
-                return -1;
-            }
-        }, items);
-    }*/
-
-    /**
-     * A shorthand for the colorizing items with your own provider.
-     * @param provider Your provider. It must return an int color to colorize the item. Use -1 for no colorizing.
-     * @param items The items to colorize.
-     */
-    /*public static void item(ItemColorProvider provider, ItemConvertible... items) {
-        ((MinecraftClientAccessor) MinecraftClient.getInstance()).getItemColors().register(provider, items);
-    }*/
-
-    /**
      * Colorize all the blocks according to the power level of the block. The block must have the POWER property.
      * @param blocks The blocks to colorize.
      */

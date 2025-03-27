@@ -4,9 +4,10 @@
   "package": "com.gekocaretaker.cyanstone.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "RedstoneOreBlockMixin",
     "RedstoneTorchBlockMixin",
-    "WallRedstoneTorchBlockMixin",
-    "RedstoneOreBlockMixin"
+    "RepeaterBlockMixin",
+    "WallRedstoneTorchBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
