@@ -1,10 +1,3 @@
-Data gen is not working. Join Fabric discord and ask for help.
-
-
-Athena
-    Let them know tinted blocks don't seem to work with their custom block state renderers.
-    I might just be stupid and did not set those correctly.
-
 Chipped
     lang
         redstone lamp, & torch item tags

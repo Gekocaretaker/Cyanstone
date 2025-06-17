@@ -6,12 +6,12 @@ import com.gekocaretaker.cyanstone.world.RedstoneColors;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RedstoneWireBlock;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 
@@ -21,7 +21,7 @@ public class CyanstoneClient implements ClientModInitializer {
     public void onInitializeClient() {
         ClientLifecycleEvents.CLIENT_STARTED.register(minecraftClient -> {
             // Make overlays transparent
-            BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), Blocks.COPPER_BULB, Blocks.WAXED_COPPER_BULB,
+            BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, Blocks.COPPER_BULB, Blocks.WAXED_COPPER_BULB,
                     Blocks.EXPOSED_COPPER_BULB, Blocks.WAXED_EXPOSED_COPPER_BULB, Blocks.OXIDIZED_COPPER_BULB, Blocks.WAXED_OXIDIZED_COPPER_BULB,
                     Blocks.WEATHERED_COPPER_BULB, Blocks.WAXED_WEATHERED_COPPER_BULB, Blocks.REDSTONE_ORE, Blocks.DEEPSLATE_REDSTONE_ORE,
                     Blocks.OBSERVER, Blocks.CRAFTER);

@@ -6,7 +6,6 @@ import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.color.block.BlockColorProvider;
-//import net.minecraft.client.color.item.ItemColorProvider;
 import net.minecraft.state.property.Properties;
 import net.minecraft.state.property.Property;
 
