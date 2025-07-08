@@ -10,6 +10,10 @@
       {
         "type": "cyanstone:redstone",
         "power": 1
+      },
+      {
+        "type": "cyanstone:redstone",
+        "power": 2
       }
     ]
   }
