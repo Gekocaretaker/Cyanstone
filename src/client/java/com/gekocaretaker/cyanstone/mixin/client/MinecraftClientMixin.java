@@ -15,13 +15,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(MinecraftClient.class)
 public class MinecraftClientMixin {
-    @Shadow @Final private ReloadableResourceManagerImpl resourceManager;
-
-    @Inject(method = "<init>(Lnet/minecraft/client/RunArgs;)V", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/systems/RenderSystem;setupDefaultState()V"))
-    private void injectToInit(RunArgs args, CallbackInfo ci) {
-        this.resourceManager.registerReloader(new RedstoneColormapResourceSupplier());
-    }
-
     @Inject(method = "onFinishedLoading(Lnet/minecraft/client/MinecraftClient$LoadingContext;)V", at = @At("TAIL"), cancellable = true)
     private void injectToOnFinishedLoading(MinecraftClient.LoadingContext loadingContext, CallbackInfo ci) {
         ActionResult result = ClientFinishedLoadingCallback.EVENT.invoker().exist();

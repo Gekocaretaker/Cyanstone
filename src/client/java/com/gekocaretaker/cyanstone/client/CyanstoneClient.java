@@ -1,5 +1,7 @@
 package com.gekocaretaker.cyanstone.client;
 
+import com.gekocaretaker.cyanstone.Cyanstone;
+import com.gekocaretaker.cyanstone.client.resource.RedstoneColormapResourceSupplier;
 import com.gekocaretaker.cyanstone.client.support.Chipped;
 import com.gekocaretaker.cyanstone.client.util.Colorizer;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
@@ -8,10 +10,12 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.RedstoneWireBlock;
 import net.minecraft.client.render.BlockRenderLayer;
+import net.minecraft.resource.ResourceType;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
 
@@ -19,6 +23,8 @@ import net.minecraft.util.ActionResult;
 public class CyanstoneClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        ResourceLoader.get(ResourceType.CLIENT_RESOURCES).registerReloader(Cyanstone.id("redstone_colormap"), new RedstoneColormapResourceSupplier());
+
         ClientLifecycleEvents.CLIENT_STARTED.register(minecraftClient -> {
             // Make overlays transparent
             BlockRenderLayerMap.putBlocks(BlockRenderLayer.CUTOUT, Blocks.COPPER_BULB, Blocks.WAXED_COPPER_BULB,
