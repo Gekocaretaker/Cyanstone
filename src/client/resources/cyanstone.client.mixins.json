@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "client": [
     "MinecraftClientMixin",
-    "render.TintSourceTypesMixin"
+    "render.ItemTintSourcesMixin"
   ],
   "injectors": {
     "defaultRequire": 1

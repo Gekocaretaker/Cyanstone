@@ -5,7 +5,7 @@ import com.gekocaretaker.cyanstone.client.util.Colorizer;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
 //import com.teamresourceful.resourcefullib.common.registry.RegistryEntry;
 //import earth.terrarium.chipped.common.registry.ModBlocks;
-import net.minecraft.block.Block;
+import net.minecraft.world.level.block.Block;
 import java.util.ArrayList;
 import java.util.List;
 

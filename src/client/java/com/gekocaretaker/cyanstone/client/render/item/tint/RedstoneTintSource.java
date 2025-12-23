@@ -5,17 +5,17 @@ import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.render.item.tint.TintSource;
-import net.minecraft.client.world.ClientWorld;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.dynamic.Codecs;
+import net.minecraft.client.color.item.ItemTintSource;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.util.ExtraCodecs;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 @Environment(EnvType.CLIENT)
-public record RedstoneTintSource(int power) implements TintSource {
+public record RedstoneTintSource(int power) implements ItemTintSource {
     public static final MapCodec<RedstoneTintSource> CODEC = RecordCodecBuilder.mapCodec((instance) -> {
-        return instance.group(Codecs.rangedInt(0, 15).fieldOf("power").forGetter(RedstoneTintSource::power))
+        return instance.group(ExtraCodecs.intRange(0, 15).fieldOf("power").forGetter(RedstoneTintSource::power))
                 .apply(instance, RedstoneTintSource::new);
     });
 
@@ -27,11 +27,12 @@ public record RedstoneTintSource(int power) implements TintSource {
         this.power = power;
     }
 
-    public int getTint(ItemStack stack, @Nullable ClientWorld world, @Nullable LivingEntity user) {
+    @Override
+    public int calculate(ItemStack stack, @Nullable ClientLevel level, @Nullable LivingEntity user) {
         return RedstoneColors.getColor(this.power);
     }
 
-    public MapCodec<RedstoneTintSource> getCodec() {
+    public MapCodec<RedstoneTintSource> type() {
         return CODEC;
     }
 

@@ -3,11 +3,11 @@ package com.gekocaretaker.cyanstone.client.util;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.Block;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.color.block.BlockColorProvider;
-import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.color.block.BlockColor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.Property;
 
 @Environment(EnvType.CLIENT)
 public class Colorizer {
@@ -17,7 +17,7 @@ public class Colorizer {
      */
     public static void block(Block... blocks) {
         block((state, world, pos, tintIndex) -> {
-            return RedstoneColors.getColor(state.get(Properties.POWER));
+            return RedstoneColors.getColor(state.getValue(BlockStateProperties.POWER));
         }, blocks);
     }
 
@@ -39,7 +39,7 @@ public class Colorizer {
     public static void blockWithOverlay(Block... blocks) {
         block((state, world, pos, tintIndex) -> {
             if (tintIndex != 0) {
-                return RedstoneColors.getColor(state.get(Properties.POWER));
+                return RedstoneColors.getColor(state.getValue(BlockStateProperties.POWER));
             } else {
                 return -1;
             }
@@ -53,7 +53,7 @@ public class Colorizer {
     public static void blockBoolOverlay(Property<Boolean> property, Block... blocks) {
         block((state, world, pos, tintIndex) -> {
             if (tintIndex != 0) {
-                return state.get(property) ? RedstoneColors.getColor(15) : RedstoneColors.getColor(2);
+                return state.getValue(property) ? RedstoneColors.getColor(15) : RedstoneColors.getColor(2);
             } else {
                 return -1;
             }
@@ -80,7 +80,7 @@ public class Colorizer {
      * @param provider Your provider. It must return an int color to colorize the block. Use -1 for no colorizing.
      * @param blocks The blocks to colorize.
      */
-    public static void block(BlockColorProvider provider, Block... blocks) {
-        MinecraftClient.getInstance().getBlockColors().registerColorProvider(provider, blocks);
+    public static void block(BlockColor provider, Block... blocks) {
+        Minecraft.getInstance().getBlockColors().register(provider, blocks);
     }
 }

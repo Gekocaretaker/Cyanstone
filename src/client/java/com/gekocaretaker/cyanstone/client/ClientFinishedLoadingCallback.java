@@ -2,20 +2,20 @@ package com.gekocaretaker.cyanstone.client;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
-import net.minecraft.util.ActionResult;
+import net.minecraft.world.InteractionResult;
 
 public interface ClientFinishedLoadingCallback {
     Event<ClientFinishedLoadingCallback> EVENT = EventFactory.createArrayBacked(ClientFinishedLoadingCallback.class,
             (listeners) -> () -> {
                 for (ClientFinishedLoadingCallback listener : listeners) {
-                    ActionResult result = listener.exist();
+                    InteractionResult result = listener.exist();
 
-                    if (result != ActionResult.SUCCESS) {
+                    if (result != InteractionResult.SUCCESS) {
                         return result;
                     }
                 }
-                return ActionResult.PASS;
+                return InteractionResult.PASS;
             });
 
-    ActionResult exist();
+    InteractionResult exist();
 }
