@@ -27,8 +27,8 @@
         "rescale": true
       },
       "faces": {
-        "down":  { "uv": [ 0, 16, 16,  0 ], "texture": "#overlay", "tintindex": 2 },
-        "up":    { "uv": [ 0,  0, 16, 16 ], "texture": "#overlay", "tintindex": 2 }
+        "down":  { "uv": [ 0, 16, 16,  0 ], "texture": "#overlay", "tintindex": 0 },
+        "up":    { "uv": [ 0,  0, 16, 16 ], "texture": "#overlay", "tintindex": 0 }
       }
     }
   ]

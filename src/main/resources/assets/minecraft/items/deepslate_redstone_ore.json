@@ -4,10 +4,6 @@
     "model": "minecraft:block/deepslate_redstone_ore",
     "tints": [
       {
-        "type": "minecraft:constant",
-        "value": -1
-      },
-      {
         "type": "cyanstone:redstone",
         "power": 13
       }

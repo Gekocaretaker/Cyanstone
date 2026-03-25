@@ -35,10 +35,10 @@
       "environment": "client"
     }
   ],
-  "accessWidener": "cyanstone.accesswidener",
+  "accessWidener": "cyanstone.classtweaker",
   "depends": {
     "fabricloader": ">=${loader_version}",
-    "fabric": "*",
+    "fabric-api": "*",
     "minecraft": ">=${minecraft_version}"
   }
 }

@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(Minecraft.class)
 public class MinecraftClientMixin {
-    @Inject(method = "Lnet/minecraft/client/Minecraft;onResourceLoadFinished(Lnet/minecraft/client/Minecraft$GameLoadCookie;)V", at = @At("TAIL"), cancellable = true)
+    @Inject(method = "onResourceLoadFinished(Lnet/minecraft/client/Minecraft$GameLoadCookie;)V", at = @At("TAIL"), cancellable = true)
     private void injectToOnFinishedLoading(Minecraft.GameLoadCookie gameLoadCookie, CallbackInfo ci) {
         InteractionResult result = ClientFinishedLoadingCallback.EVENT.invoker().exist();
 

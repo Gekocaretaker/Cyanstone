@@ -3,11 +3,13 @@ package com.gekocaretaker.cyanstone.client.util;
 import com.gekocaretaker.cyanstone.world.RedstoneColors;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.color.block.BlockColor;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
+import net.minecraft.client.color.block.BlockTintSource;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.Property;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+
+import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class Colorizer {
@@ -16,9 +18,16 @@ public class Colorizer {
      * @param blocks The blocks to colorize.
      */
     public static void block(Block... blocks) {
-        block((state, world, pos, tintIndex) -> {
-            return RedstoneColors.getColor(state.getValue(BlockStateProperties.POWER));
-        }, blocks);
+        block(state -> RedstoneColors.getColor(state.getValue(BlockStateProperties.POWER)), blocks);
+    }
+
+    /**
+     * Set the color of the blocks based on a boolean property.
+     * @param property The property used to determine the color
+     * @param blocks The blocks to be colorized.
+     */
+    public static void block(BooleanProperty property, Block... blocks) {
+        block(state -> state.getValue(property) ? RedstoneColors.getColor(15) : RedstoneColors.getColor(2), blocks);
     }
 
     /**
@@ -27,60 +36,56 @@ public class Colorizer {
      * @param blocks The blocks to colorize.
      */
     public static void block(int powerLevel, Block... blocks) {
-        block((state, world, pos, tintIndex) -> {
-            return RedstoneColors.getColor(powerLevel);
-        }, blocks);
+        block(_ -> RedstoneColors.getColor(powerLevel), blocks);
     }
 
     /**
-     * Colorizes the blocks that have any tint index besides 0 according to the power level. Needs the POWER property.
+     * Colorizes the blocks that have a tint index of 0 according to the power level. Needs the POWER property.
      * @param blocks The blocks to colorize.
+     * @deprecated Use block(Block...) instead, as both fulfill the same purpose.
      */
+    @Deprecated(forRemoval = true)
     public static void blockWithOverlay(Block... blocks) {
-        block((state, world, pos, tintIndex) -> {
-            if (tintIndex != 0) {
-                return RedstoneColors.getColor(state.getValue(BlockStateProperties.POWER));
-            } else {
-                return -1;
-            }
-        }, blocks);
+        block(blocks);
     }
 
     /**
      * This colorizes if the BooleanProperty given is true.
+     * @param property The property used to determine the color
      * @param blocks The blocks to be colorized.
+     * @deprecated Use block(BooleanProperty, Block...) instead, as both fulfill the same purpose.
      */
-    public static void blockBoolOverlay(Property<Boolean> property, Block... blocks) {
-        block((state, world, pos, tintIndex) -> {
-            if (tintIndex != 0) {
-                return state.getValue(property) ? RedstoneColors.getColor(15) : RedstoneColors.getColor(2);
-            } else {
-                return -1;
-            }
-        }, blocks);
+    @Deprecated(forRemoval = true)
+    public static void blockBoolOverlay(BooleanProperty property, Block... blocks) {
+        block(property, blocks);
     }
 
     /**
-     * Colorizes the blocks that have any tint index besides 0 according to the power level given.
+     * Colorizes the blocks that have a tint index of 0 according to the power level given.
      * @param overlayPowerLevel The power level of the overlay.
      * @param blocks The blocks to colorize.
+     * @deprecated Use block(int, Block...) instead, as both fulfill the same purpose.
      */
+    @Deprecated(forRemoval = true)
     public static void blockWithOverlay(int overlayPowerLevel, Block... blocks) {
-        block((state, world, pos, tintIndex) -> {
-            if (tintIndex != 0) {
-                return RedstoneColors.getColor(overlayPowerLevel);
-            } else {
-                return -1;
-            }
-        }, blocks);
+        block(overlayPowerLevel, blocks);
     }
 
     /**
-     * A shorthand for the colorizing blocks with your own provider.
-     * @param provider Your provider. It must return an int color to colorize the block. Use -1 for no colorizing.
+     * A shorthand for the colorizing blocks with your own source.
+     * @param source Your source. It must return an int color to colorize the block. Use -1 for no colorizing.
      * @param blocks The blocks to colorize.
      */
-    public static void block(BlockColor provider, Block... blocks) {
-        Minecraft.getInstance().getBlockColors().register(provider, blocks);
+    public static void block(BlockTintSource source, Block... blocks) {
+        BlockColorRegistry.register(List.of(source), blocks);
+    }
+
+    /**
+     * A shorthand for the colorizing block with your own list of providers.
+     * @param sources Your sources. Each one must return an int color to colorize the block at the specific tintIndex. Use -1 for no colorizing.
+     * @param blocks The blocks to colorize.
+     */
+    public static void block(List<BlockTintSource> sources, Block... blocks) {
+        BlockColorRegistry.register(sources, blocks);
     }
 }
