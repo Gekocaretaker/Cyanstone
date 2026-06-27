@@ -13,6 +13,7 @@ import net.fabricmc.fabric.api.resource.v1.ResourceLoader;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RedStoneWireBlock;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -31,9 +32,11 @@ public class CyanstoneClient implements ClientModInitializer {
             Colorizer.block(15, Blocks.REDSTONE_BLOCK);
             Colorizer.block(13, Blocks.REDSTONE_ORE, Blocks.DEEPSLATE_REDSTONE_ORE);
             Colorizer.block(BlockStateProperties.LIT, Blocks.REDSTONE_TORCH, Blocks.REDSTONE_WALL_TORCH);
-            Colorizer.block(BlockStateProperties.POWERED, Blocks.COPPER_BULB, Blocks.WAXED_COPPER_BULB,
-                    Blocks.EXPOSED_COPPER_BULB, Blocks.WAXED_EXPOSED_COPPER_BULB, Blocks.OXIDIZED_COPPER_BULB, Blocks.WAXED_OXIDIZED_COPPER_BULB,
-                    Blocks.WEATHERED_COPPER_BULB, Blocks.WAXED_WEATHERED_COPPER_BULB, Blocks.ACTIVATOR_RAIL, Blocks.DETECTOR_RAIL, Blocks.POWERED_RAIL,
+            Colorizer.block(BlockStateProperties.POWERED, Blocks.COPPER_BULB.weathering().unaffected(),
+                    Blocks.COPPER_BULB.weathering().exposed(), Blocks.COPPER_BULB.weathering().weathered(),
+                    Blocks.COPPER_BULB.weathering().oxidized(), Blocks.COPPER_BULB.waxed().unaffected(),
+                    Blocks.COPPER_BULB.waxed().exposed(), Blocks.COPPER_BULB.waxed().weathered(),
+                    Blocks.COPPER_BULB.waxed().oxidized(), Blocks.ACTIVATOR_RAIL, Blocks.DETECTOR_RAIL, Blocks.POWERED_RAIL,
                     Blocks.OBSERVER, Blocks.REPEATER);
             Colorizer.block(List.of(
                     _ -> RedstoneColors.getColor(2),
